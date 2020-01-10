@@ -23,10 +23,10 @@ public class Activator : MonoBehaviour {
 			Destroy(note);
 		}
 
-		if (SwipeDetector.ReferenceEquals(SwipeDirection.Up))				//Did this really work???????
+		/*if (SwipeDetector.ReferenceEquals(SwipeDirection.Up))    //Did this really 
 		{
 			Destroy(note);
-		}
+		}*/
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
