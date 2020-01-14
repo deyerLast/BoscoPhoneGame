@@ -38,7 +38,12 @@ public class SwipeDetector : MonoBehaviour
         }
     }
 
-    private void DetectSwipe()
+	internal static bool ReferenceEquals(SwipeDirection up)
+	{
+		throw new NotImplementedException();
+	}
+
+	private void DetectSwipe()
     {
         if (SwipeDistanceCheckMet())
         {
