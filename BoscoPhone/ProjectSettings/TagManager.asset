@@ -5,7 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Note
-  - Activator
+  - DrawSection
+  - Text
   layers:
   - Default
   - TransparentFX
@@ -46,7 +47,7 @@ TagManager:
   - name: Note
     uniqueID: 2784104351
     locked: 0
-  - name: Activator
+  - name: DrawSection
     uniqueID: 3346695815
     locked: 0
   - name: TouchMouse

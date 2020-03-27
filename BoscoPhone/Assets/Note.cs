@@ -10,16 +10,15 @@ public class Note : MonoBehaviour {
 	//public SwipeDirection swipe;
 
 
-	
-
 	private void Awake()
 	{
-		rb = GetComponent<Rigidbody2D>();
+		rb = GetComponent<Rigidbody2D>();//This was for collisions
 	}
 
 	// Use this for initialization
 	void Start () {
-		rb.velocity = new Vector2(0, -speed);
+		rb.velocity = new Vector2(-speed, 0);//The Balls will fall and then sit in SSlider?
+		//Put a count down clock in to start the game?
 	}
 	
 	// Update is called once per frame
