@@ -21,6 +21,8 @@ public class SwipeDetector : MonoBehaviour {
 
 	}*/
 
+	//==============================================================================================================================
+
 	// Update is called once per frame
 	private void Update() {
 		foreach (Touch touch in Input.touches)
@@ -45,6 +47,8 @@ public class SwipeDetector : MonoBehaviour {
 		}
 	}
 
+	//==============================================================================================================================
+
 	private void DetectSwipe()
 	{
 		if (SwipeDistanceCheckMet())//disctance more than 20
@@ -52,6 +56,8 @@ public class SwipeDetector : MonoBehaviour {
 			if (IsVerticalSwipe())
 			{
 				var direction = fingerDownPos.y - fingerUpPos.y > 0 ? SwipeDirection.Up : SwipeDirection.Down;
+				//if y - x > 0 then swipe was up. 
+				//Else, it was down. 
 				SendSwipe(direction);
 			}
 			else
@@ -63,7 +69,7 @@ public class SwipeDetector : MonoBehaviour {
 		}
 	}
 
-
+//==============================================================================================================================
 
 	public struct SwipeData
 	{
@@ -89,6 +95,8 @@ public class SwipeDetector : MonoBehaviour {
 		return Mathf.Abs(fingerDownPos.x - fingerUpPos.x);
 	}
 
+//==============================================================================================================================
+
 	private void SendSwipe(SwipeDirection direction)
 	{
 		SwipeData swipeData = new SwipeData()
@@ -102,6 +110,9 @@ public class SwipeDetector : MonoBehaviour {
 
 }//end script
 
+//==============================================================================================================================
+//==============================================================================================================================
+//==============================================================================================================================
 
 public struct SwipeData
 {
@@ -109,6 +120,8 @@ public struct SwipeData
 	public Vector2 EndPosition;
 	public SwipeDirection Direction;
 }
+
+//==============================================================================================================================
 
 public enum SwipeDirection
 {

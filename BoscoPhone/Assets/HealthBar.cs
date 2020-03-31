@@ -8,8 +8,19 @@ public class HealthBar : MonoBehaviour {
 	public Slider slider;
 	public Gradient gradient;//this is to change the healthbar colors at different points.
 	public Image fill;
+    //public Slider slider;
 
-	public void SetMaxHealth(int health)
+    private void Start()
+    {
+        int startHealth = (int) slider.maxValue;
+        slider.value.Equals(startHealth);
+        /*if (!slider.value.Equals(slider.maxValue))
+        {
+            slider.value.Equals(slider.maxValue);
+        }*/
+    }
+
+    public void SetMaxHealth(int health)
 	{
 		slider.maxValue = health;
 		slider.value = health;
