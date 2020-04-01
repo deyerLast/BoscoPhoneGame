@@ -9,7 +9,7 @@ public class SwipeManager : MonoBehaviour {
     public static SwipeManager Instance { get { return instance; } }
 
     public SwipeDirection Direction { set; get; } //this is a property
-    
+	public SwipeDirection NoteDirection { set; get; }
 
     private Vector3 touchPos;
     private float swipeResistanceX = 20f;
@@ -38,10 +38,7 @@ public class SwipeManager : MonoBehaviour {
 		if (Input.GetMouseButtonUp(0))
 		{
 			Vector2 deltaSwipe = touchPos - Input.mousePosition;
-            float x1 = touchPos.x;
-            float x2 = deltaSwipe.x;
-            float y1 = touchPos.y;
-            float y2 = touchPos.y;
+            
 
             //Debug.Log(deltaSwipe);
 
@@ -85,8 +82,45 @@ public class SwipeManager : MonoBehaviour {
         }//Mouse ButtUP
 	}//Update
 
-    //==============================================================================================================================
+	//==============================================================================================================================
 
+
+	static public SwipeDirection createRndDirection()
+	{
+		int num = Random.Range(1, 8);//Create number between 1-8
+		Debug.Log(num);
+		switch (num)
+		{
+			case 1:
+				NoteDirection = SwipeDirection.Down;
+				break;
+			case 2:
+				NoteDirection = SwipeDirection.DownRight;
+				break;
+			case 3:
+				NoteDirection = SwipeDirection.Right;
+				break;
+			case 4:
+				NoteDirection = SwipeDirection.UpRight;
+				break;
+			case 5:
+				NoteDirection = SwipeDirection.Up;
+				break;
+			case 6:
+				NoteDirection = SwipeDirection.UpLeft;
+				break;
+			case 7:
+				NoteDirection = SwipeDirection.Left;
+				break;
+			case 8:
+				NoteDirection = SwipeDirection.DownLeft;
+				break;
+			default:
+				Debug.Log("Err Class NoteGen_RndNumb_Switch");
+				break;
+		}
+		return NoteDirection;
+	}
 
 }
 
