@@ -35,16 +35,14 @@ public class NoteCreator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (noteList.IsFixedSize.Equals(0))
-        {
-
-        }
+       
     }
 
     private void SpawnNote()
     {
         GameObject a = Instantiate(notePrefab) as GameObject;//added to scene
         a.transform.position = targetCreator.position;
+		
     }
 
 

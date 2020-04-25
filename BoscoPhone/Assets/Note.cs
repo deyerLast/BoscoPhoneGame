@@ -12,12 +12,16 @@ public class Note : MonoBehaviour {
     public Random rnd = new Random();
 	static int maxNotes;
     GameObject noteStuff;
-	Sprite noteSprite;
+	//Sprite noteSprite;
     public SwipeDirection NoteDirection { set;get;}
 	bool active = false;
 	public static Vector3 noteScale = new Vector3(2.244f,12.939f,1.0f);
 
 	SwipeManager swipe;
+
+
+
+	public Sprite Down,Right,Left,Up,uRight,dRight,uLeft,dLeft;
     
 
     //==============================================================================================================================
@@ -26,6 +30,8 @@ public class Note : MonoBehaviour {
     private void Awake()
 	{
 		rb = GetComponent<Rigidbody2D>();//This was for collisions
+		this.GetComponent<Renderer>().bounds.size.y.Equals(2f);
+
 	}
 
 
@@ -39,7 +45,46 @@ public class Note : MonoBehaviour {
 		swipeDirection = CreateRndDirection();
 		transform.localScale = noteScale;//WHY ISN"T THIS SCALING WORKING?										???			???
 
-    }
+		
+
+		//Each Note has their own
+		if (NoteDirection.Equals(SwipeDirection.Down))
+		{
+			this.gameObject.GetComponent<SpriteRenderer>().sprite = Down;
+		}
+		else if (NoteDirection.Equals(SwipeDirection.Up))
+		{
+			this.gameObject.GetComponent<SpriteRenderer>().sprite = Up;
+		}
+		else if (NoteDirection.Equals(SwipeDirection.Right))
+		{
+			this.gameObject.GetComponent<SpriteRenderer>().sprite = Right;
+		}
+		else if (NoteDirection.Equals(SwipeDirection.Left))
+		{
+			this.gameObject.GetComponent<SpriteRenderer>().sprite = Left;
+		}
+		else if (NoteDirection.Equals(SwipeDirection.DownLeft))
+		{
+			this.gameObject.GetComponent<SpriteRenderer>().sprite = dLeft;
+		}
+		else if (NoteDirection.Equals(SwipeDirection.UpLeft))
+		{
+			this.gameObject.GetComponent<SpriteRenderer>().sprite = uLeft;
+		}
+		else if (NoteDirection.Equals(SwipeDirection.UpRight))
+		{
+			this.gameObject.GetComponent<SpriteRenderer>().sprite = uRight;
+		}
+		else if (NoteDirection.Equals(SwipeDirection.DownRight))
+		{
+			this.gameObject.GetComponent<SpriteRenderer>().sprite = uRight;
+		}
+		else{
+			
+		}
+
+	}
 
 
     //==============================================================================================================================
@@ -50,7 +95,14 @@ public class Note : MonoBehaviour {
 		if (active)
 		{
 			rb.isKinematic = true;//freeze the note
-		} 
+		}
+
+
+		if (NoteDirection.Equals(SwipeDirection.Down))
+		{
+			this.gameObject.GetComponent<SpriteRenderer>().sprite = Down;
+		}
+		
 		
 	}
 
