@@ -15,7 +15,7 @@ public class Note : MonoBehaviour {
 	//Sprite noteSprite;
     public SwipeDirection NoteDirection { set;get;}
 	bool active = false;
-	public static Vector3 noteScale = new Vector3(2.244f,12.939f,1.0f);
+	public static Vector3 noteScale = new Vector3(30.5f,30.5f,1.0f);
 
 	SwipeManager swipe;
 
@@ -94,14 +94,15 @@ public class Note : MonoBehaviour {
 		
 		if (active)
 		{
-			rb.isKinematic = true;//freeze the note
+			rb.isKinematic = false;//freeze the note
+								  //Set Note position here?
+								  //this.RigidBody.velocity = Vector3.zero;
+
+			//this.rb.velocity = Vector3.zero;
 		}
 
 
-		if (NoteDirection.Equals(SwipeDirection.Down))
-		{
-			this.gameObject.GetComponent<SpriteRenderer>().sprite = Down;
-		}
+		
 		
 		
 	}
@@ -118,6 +119,9 @@ public class Note : MonoBehaviour {
 		{
 			noteStuff = collision.gameObject;
 			active = true;
+
+
+			//set position to spot at where it started colliding
 		}
 	}
 
