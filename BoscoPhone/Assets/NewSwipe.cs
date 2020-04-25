@@ -7,7 +7,7 @@ public class NewSwipe : MonoBehaviour {
 	private Vector3 position;
 	private float width;
 	private float height;
-	GameObject particle;
+	static GameObject particle;
 
 	private void Awake()
 	{

@@ -10,11 +10,14 @@ public class Note : MonoBehaviour {
 	public float speed;
     public SwipeDirection swipeDirection;
     public Random rnd = new Random();
+	static int maxNotes;
     GameObject noteStuff;
+	Sprite noteSprite;
     public SwipeDirection NoteDirection { set;get;}
+	bool active = false;
+	public static Vector3 noteScale = new Vector3(2.244f,12.939f,1.0f);
 
-    
-    SwipeManager swipe;
+	SwipeManager swipe;
     
 
     //==============================================================================================================================
@@ -27,26 +30,15 @@ public class Note : MonoBehaviour {
 
 
 
-    //============================================================================================================================
+	//============================================================================================================================
 
-    // Use this for initialization///CONSTRUCTOR
-    void Start () {
-        speed = 100f;
+	// Use this for initialization///CONSTRUCTOR
+	void Start() {
+		speed = 100f;
 		rb.velocity = new Vector2(-speed, 0);//The Balls will fall and then sit in SSlider?
-		GameObject note;
-        int num = 1;
-        
-        note = new GameObject("Note" + num);
-        var unused = note.AddComponent<SwipeManager>().Direction;
-        
-        createRndDirection();
-        swipeDirection = NoteDirection;
+		swipeDirection = CreateRndDirection();
+		transform.localScale = noteScale;//WHY ISN"T THIS SCALING WORKING?										???			???
 
-        note.AddComponent<Note>();
-        
-        //have to include SwipeDirection here. 
-        
-        
     }
 
 
@@ -54,33 +46,33 @@ public class Note : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        //Should be in a private void method 
-        /*if (swipe.Direction.Equals(NoteDirection))
-        {
-            Destroy(this) )//If noteStuff collides with box collider2d, 
-        {
-            //speed =0;
-            speed = 0;
-        }
-        */
-        if( rb.collisionDetectionMode.Equals( GameObject.FindGameObjectWithTag( "NoteStopper" ) )  || rb.collisionDetectionMode.Equals(GameObject.FindGameObjectWithTag("Note")))
-        {
-            //Vector2 tempVector =  rb.GetPoint();
-            //rb.position.Set();
-        }
-
-     
-        
+		
+		if (active)
+		{
+			rb.isKinematic = true;//freeze the note
+		} 
+		
 	}
 
-    
 
 
 
-    //==============================================================================================================================
-    //==============================================================================================================================
 
-    public SwipeDirection createRndDirection()
+	//==============================================================================================================================
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "Note" || collision.gameObject.tag == "NoteStopper" || collision.gameObject.tag == "BestNote")
+		{
+			noteStuff = collision.gameObject;
+			active = true;
+		}
+	}
+
+
+	//==============================================================================================================================
+
+	public SwipeDirection CreateRndDirection()
     {
         int num = Random.Range(1, 8);//Create number between 1-8
         Debug.Log(num);

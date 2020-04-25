@@ -22,7 +22,7 @@ public class NoteCreator : MonoBehaviour
         for(int i = 0; i < 7; i++)
         {
             //NEED to make the spawning wait a certain amount of time. 
-            spawnNote();
+            SpawnNote();
         }
     }
 
@@ -41,7 +41,7 @@ public class NoteCreator : MonoBehaviour
         }
     }
 
-    private void spawnNote()
+    private void SpawnNote()
     {
         GameObject a = Instantiate(notePrefab) as GameObject;//added to scene
         a.transform.position = targetCreator.position;

@@ -85,42 +85,6 @@ public class SwipeManager : MonoBehaviour {
 	//==============================================================================================================================
 
 
-	static public SwipeDirection createRndDirection()
-	{
-		int num = Random.Range(1, 8);//Create number between 1-8
-		Debug.Log(num);
-		switch (num)
-		{
-			case 1:
-				NoteDirection = SwipeDirection.Down;
-				break;
-			case 2:
-				NoteDirection = SwipeDirection.DownRight;
-				break;
-			case 3:
-				NoteDirection = SwipeDirection.Right;
-				break;
-			case 4:
-				NoteDirection = SwipeDirection.UpRight;
-				break;
-			case 5:
-				NoteDirection = SwipeDirection.Up;
-				break;
-			case 6:
-				NoteDirection = SwipeDirection.UpLeft;
-				break;
-			case 7:
-				NoteDirection = SwipeDirection.Left;
-				break;
-			case 8:
-				NoteDirection = SwipeDirection.DownLeft;
-				break;
-			default:
-				Debug.Log("Err Class NoteGen_RndNumb_Switch");
-				break;
-		}
-		return NoteDirection;
-	}
 
 }
 
