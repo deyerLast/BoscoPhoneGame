@@ -1,0 +1,68 @@
+{ "skeleton": { "images": "B:/0_bosco_game/BoscoPhoneGame/gameassets/spine2d/mc/images/" },
+"bones": [
+	{ "name": "root" }
+],
+"slots": [
+	{ "name": "left arm", "bone": "root", "attachment": "left arm" },
+	{ "name": "backpants", "bone": "root", "attachment": "backpants" },
+	{ "name": "right leg", "bone": "root", "attachment": "right leg" },
+	{ "name": "left leg", "bone": "root", "attachment": "left leg" },
+	{ "name": "chest", "bone": "root", "attachment": "chest" },
+	{ "name": "mouth", "bone": "root", "attachment": "mouth" },
+	{ "name": "jaw", "bone": "root", "attachment": "jaw" },
+	{ "name": "upperface", "bone": "root", "attachment": "upperface" },
+	{ "name": "hair", "bone": "root", "attachment": "hair" },
+	{ "name": "pants", "bone": "root", "attachment": "pants" },
+	{ "name": "right hand", "bone": "root", "attachment": "right hand" },
+	{ "name": "flame3", "bone": "root", "attachment": "flame3" },
+	{ "name": "flame2", "bone": "root", "attachment": "flame2" },
+	{ "name": "flame1", "bone": "root", "attachment": "flame1" }
+],
+"skins": {
+	"default": {
+		"left arm": {
+			"left arm": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"backpants": {
+			"backpants": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"right leg": {
+			"right leg": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"left leg": {
+			"left leg": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"chest": {
+			"chest": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"mouth": {
+			"mouth": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"jaw": {
+			"jaw": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"upperface": {
+			"upperface": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"hair": {
+			"hair": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"pants": {
+			"pants": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"right hand": {
+			"right hand": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"flame3": {
+			"flame3": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"flame2": {
+			"flame2": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		},
+		"flame1": {
+			"flame1": { "x": 400, "y": -500, "width": 802, "height": 1002 }
+		}
+	}
+},
+"animations": { "animation": {} }
+}
