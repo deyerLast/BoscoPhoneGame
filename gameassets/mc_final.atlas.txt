@@ -1,0 +1,160 @@
+
+mc_final.png
+size: 968,608
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+backpants
+  rotate: false
+  xy: 485, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+breath2
+  rotate: false
+  xy: 2, 2
+  size: 155, 113
+  orig: 155, 113
+  offset: 0, 0
+  index: -1
+
+mc_final2.png
+size: 968,608
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+breath1
+  rotate: false
+  xy: 2, 2
+  size: 108, 88
+  orig: 108, 88
+  offset: 0, 0
+  index: -1
+chest
+  rotate: false
+  xy: 485, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+
+mc_final3.png
+size: 968,608
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+flame1
+  rotate: false
+  xy: 2, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+flame2
+  rotate: false
+  xy: 485, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+
+mc_final4.png
+size: 968,608
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+flame3
+  rotate: false
+  xy: 2, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+hair
+  rotate: false
+  xy: 485, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+
+mc_final5.png
+size: 968,608
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jaw
+  rotate: false
+  xy: 2, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+left arm
+  rotate: false
+  xy: 485, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+
+mc_final6.png
+size: 968,608
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+left leg
+  rotate: false
+  xy: 2, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+mouth
+  rotate: false
+  xy: 485, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+
+mc_final7.png
+size: 968,608
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pants
+  rotate: false
+  xy: 2, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+right hand
+  rotate: false
+  xy: 485, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+
+mc_final8.png
+size: 968,608
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+right leg
+  rotate: false
+  xy: 2, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
+upperface
+  rotate: false
+  xy: 485, 2
+  size: 481, 601
+  orig: 481, 601
+  offset: 0, 0
+  index: -1
