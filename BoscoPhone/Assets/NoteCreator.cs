@@ -9,7 +9,7 @@ public class NoteCreator : MonoBehaviour
     public GameObject notePrefab;
     private Vector2 itemBound;
 
-	private float timer = 0;
+	private float timer = 0;         //My timer isn't working properly
 	private float timerMax = 0;
 	private int noteCounter = 0;
 
@@ -23,13 +23,7 @@ public class NoteCreator : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-
-		for (noteCounter= 0; noteCounter < 7; noteCounter++)
-		{
-			//NEED to make the spawning wait a certain amount of time. 
-			SpawnNote();
-			Waited(5);//Does the game need this wait?
-		}
+		
     }
 
     /*private void Instantiate(Note noteClass, GameObject[] gameObject)
@@ -43,7 +37,10 @@ public class NoteCreator : MonoBehaviour
     {
        if(noteCounter != 7)
 		{
+			//Waited(115);
 			SpawnNote();
+			noteCounter++;
+			//Waited(5);
 		}
     }
 
@@ -51,9 +48,10 @@ public class NoteCreator : MonoBehaviour
 
     private void SpawnNote()
     {
+		Waited(5);
         GameObject a = Instantiate(notePrefab) as GameObject;//added to scene
         a.transform.position = targetCreator.position;
-		
+		//Waited(2);
     }
 
 
@@ -66,10 +64,10 @@ public class NoteCreator : MonoBehaviour
 
 		if(timer >= timerMax)
 		{
-			return true; //max reached - waited x - seconds
+			return false; //max reached - waited x - seconds
 		}
 
-		return false;
+		return true;
 	}
 
 
